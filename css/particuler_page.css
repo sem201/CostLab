@@ -1,5 +1,11 @@
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 header {
   box-sizing: border-box;
@@ -12,6 +18,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: blue;
+  z-index: 999;
 }
 .header input {
   width: 167px;
@@ -61,22 +69,13 @@ button {
   max-height: 450px;
 }
 
-img {
+.item-img img {
   width: 50%;
 }
 
-.item-explain {
-  grid-area: right;
-  width: 520px;
-  height: 450px;
-  background-color: darkblue;
-}
-
-.item-comment {
-  grid-area: bottom;
-}
-
 .grid-container {
+  width: 100vw;
+  height: 75vh;
   display: grid;
   position: relative;
   top: 15vh;
@@ -89,4 +88,55 @@ img {
 
 .grid-container > div {
   background-color: rgb(99, 20 7, 141);
+}
+
+.list {
+  text-align: center;
+}
+
+.item-img img {
+  width: 100%;
+  padding: 50px;
+}
+
+.item-info {
+  text-align: left;
+  margin: 100px 50px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.item-info-header h3 {
+  font-size: 31px;
+}
+
+.price {
+  font-size: 25px;
+}
+
+.cart {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cart a {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.cart a:hover {
+  background-color: black;
+  color: white;
+}
+
+.item-comment {
+  text-align: center;
+}
+
+.item-comment button {
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
