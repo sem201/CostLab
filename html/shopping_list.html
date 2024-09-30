@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>particuler_page</title>
     <link rel="stylesheet" href="../css/shopping_list.css" />
   </head>
   <body>
@@ -36,82 +36,118 @@
         </div>
       </div>
     </header>
-    <div class="grid-container">
-      <div class="section list">
-        <div class="category_container">
-          <img
-            src="../img/list.svg"
-            alt="목록"
-            style="width: 50px; height: 50px"
-          />
-          <p class="category_text">카테고리</p>
+    <hr />
+    <div class="main_container">
+      <div class="main_header"><h2>장바구니</h2></div>
+
+      <div class="cart_container">
+        <div class="delivery">
+          <button class="choose">일반배송</button
+          ><button class="none">매장배송</button>
         </div>
-        <hr />
-        <div class="category_list">
-          <p class="category">식품</p>
-          <p class="category">전자기기</p>
-          <p class="category">가구</p>
+        <div class="cart_content">
+          <div class="cart_content_left">
+            <ul class="group_header">
+              <li>상품정보</li>
+              <li>수량</li>
+              <li>주문금액</li>
+            </ul>
+            <div style="margin-top: 50px"></div>
+            <ul class="choose_list">
+              <li>
+                <img src="../img/rice.webp" />
+                <div class="goods_box">
+                  <div class="goods_detail" style="min-width: 350px">
+                    동물복지 인증 유정란으로 만든 계란(10입)
+                  </div>
+                  <div class="goods_count" style="min-width: 80px">1</div>
+                  <div class="goods_price" style="min-width: 170px">9900원</div>
+                </div>
+              </li>
+              <li>
+                <img src="../img/rice.webp" />
+                <div class="goods_box">
+                  <div class="goods_detail" style="min-width: 350px">
+                    동물복지 인증 유정란으로 만든 계란(10입)
+                  </div>
+                  <div class="goods_count" style="min-width: 80px">1</div>
+                  <div class="goods_price" style="min-width: 170px">9900원</div>
+                </div>
+              </li>
+              <li>
+                <img src="../img/rice.webp" />
+                <div class="goods_box">
+                  <div class="goods_detail" style="min-width: 350px">
+                    동물복지 인증 유정란으로 만든 계란(10입)
+                  </div>
+                  <div class="goods_count" style="min-width: 80px">1</div>
+                  <div class="goods_price" style="min-width: 170px">9900원</div>
+                </div>
+              </li>
+              <li>
+                <img src="../img/rice.webp" />
+                <div class="goods_box">
+                  <div class="goods_detail" style="min-width: 350px">
+                    동물복지 인증 유정란으로 만든 계란(10입)
+                  </div>
+                  <div class="goods_count" style="min-width: 80px">1</div>
+                  <div class="goods_price" style="min-width: 170px">9900원</div>
+                </div>
+              </li>
+              <li>
+                <img src="../img/rice.webp" />
+                <div class="goods_box">
+                  <div class="goods_detail" style="min-width: 350px">
+                    동물복지 인증 유정란으로 만든 계란(10입)
+                  </div>
+                  <div class="goods_count" style="min-width: 80px">1</div>
+                  <div class="goods_price" style="min-width: 170px">9900원</div>
+                </div>
+              </li>
+              <li>
+                <img src="../img/rice.webp" />
+                <div class="goods_box">
+                  <div class="goods_detail" style="min-width: 350px">
+                    동물복지 인증 유정란으로 만든 계란(10입)
+                  </div>
+                  <div class="goods_count" style="min-width: 80px">1</div>
+                  <div class="goods_price" style="min-width: 170px">9900원</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="cart_content_right">
+            <div class="cart_total">
+              <p
+                style="
+                  margin-bottom: 16px;
+                  font-size: 18px;
+                  font-weight: 500;
+                  line-height: 26px;
+                "
+              >
+                결제 예정금액
+              </p>
+              <div class="total">
+                <div>
+                  <p class="total_text">총 상품금액</p>
+                  <p class="total_text">총 할인금액</p>
+                  <p class="total_text">총 배송비</p>
+                  <p class="total_text" style="margin-top: 20px">총 주문금액</p>
+                </div>
+
+                <div>
+                  <p>9900원</p>
+                  <p>-4000원</p>
+                  <p>-3000원</p>
+                  <p style="color: #ff752a; margin-top: 20px">8900원</p>
+                </div>
+              </div>
+            </div>
+            <button class="purchase">구매하기</button>
+          </div>
         </div>
       </div>
-      <div class="section item-img">
-        <div class="item_list">
-          <img
-            src="../img/rice.webp"
-            alt=""
-            style="width: 200px; height: 200px"
-          />
-          <div class="item_explain">
-            <div><b>무생채 국내산 무로 만든 새콤달콤 담백함</b></div>
-            <div>
-              <p style="float: left">n개</p>
-              <p style="float: right">10000원</p>
-            </div>
-          </div>
-        </div>
-        <div class="item_list">
-          <img
-            src="../img/rice.webp"
-            alt=""
-            style="width: 200px; height: 200px"
-          />
-          <div class="item_explain">
-            <div><b>무생채 국내산 무로 만든 새콤달콤 담백함</b></div>
-            <div>
-              <p style="float: left">n개</p>
-              <p style="float: right">10000원</p>
-            </div>
-          </div>
-        </div>
-        <div class="item_list">
-          <img
-            src="../img/rice.webp"
-            alt=""
-            style="width: 200px; height: 200px"
-          />
-          <div class="item_explain">
-            <div><b>무생채 국내산 무로 만든 새콤달콤 담백함</b></div>
-            <div>
-              <p style="float: left">n개</p>
-              <p style="float: right">10000원</p>
-            </div>
-          </div>
-        </div>
-        <div class="item_list">
-          <img
-            src="../img/rice.webp"
-            alt=""
-            style="width: 200px; height: 200px"
-          />
-          <div class="item_explain">
-            <div><b>무생채 국내산 무로 만든 새콤달콤 담백함</b></div>
-            <div>
-              <p style="float: left">n개</p>
-              <p style="float: right">10000원</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section item-comment"></div>
     </div>
   </body>
 </html>
