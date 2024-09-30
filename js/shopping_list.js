@@ -71,12 +71,16 @@ function createProductData() {
       category: "스포츠",
     },
   ];
+<<<<<<< HEAD
   console.log("ddd");
+=======
+>>>>>>> 682fab610d11944e2270413fa64bc9be1fd4c305
 
   localStorage.setItem("productList", JSON.stringify(list));
 }
 createProductData();
 const products = JSON.parse(localStorage.getItem("productList"));
+<<<<<<< HEAD
 console.log(products);
 console.log(products[0].image);
 
@@ -104,3 +108,5 @@ for (let i = 0; i < products.length; i++) {
 
   // 자식요소 추가 (요소.append(추가할 요소 ))
 }
+=======
+>>>>>>> 682fab610d11944e2270413fa64bc9be1fd4c305

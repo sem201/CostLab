@@ -1,0 +1,122 @@
+/* 룰렛이벤트
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.first-box {
+  width: 300px;
+  height: 100px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.roulette {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(
+    #ffcccb 0% 16.66%,
+    #f9f871 16.66% 33.33%,
+    #98fb98 33.33% 50%,
+    #87ceeb 50% 66.66%,
+    #dda0dd 66.66% 83.33%,
+    #ffb6c1 83.33% 100%
+  );
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 100px solid red;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(0deg);
+  transition: transform 4s ease-out;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+  */
+
+/* 이벤트 페이지 */
+
+.container1,
+.container2 {
+  position: relative;
+  display: flex; /* Flexbox 사용 */
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  height: 100%; /* 섹션 전체 높이 */
+  z-index: 1; /* 다른 요소 위로 */
+}
+.full-image {
+  width: 100%;
+  height: 100%; /* 섹션 전체를 꽉 채움 */
+  object-fit: cover; /* 이미지 비율 유지하며 꽉 차게 */
+  position: absolute; /* 부모 요소에 따라 위치 */
+  top: 0;
+  left: 0;
+  z-index: -1; /* 이미지 뒤로 보내기 */
+}
+
+img {
+  display: block;
+}
+.clickable-area1,
+.clickable-area2 {
+  position: absolute;
+  bottom: 10%; /* 이미지의 10% 아래쪽에 위치 */
+  left: 50%;
+  transform: translateX(-50%); /* 중앙 정렬 */
+  padding: 10px 10px;
+  background-color: rgb(105, 68, 208); /* 배경 색상 */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px; /* 폰트 크기 조정 */
+}
+
+/* fullpage */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: rgb(0, 0, 0);
+}
+.fp-tooltip {
+  font-size: 1.2em !important;
+  margin-right: 10px;
+}
