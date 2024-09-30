@@ -6,124 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../css/home.css">
-
+  <link rel="stylesheet" href="../css/shopping_list.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
 
   <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"
     integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
-  <style>
-    /* .header {
-      width: 100%;
-      height: 15vh;
-    }
 
-
-
-    .category {
-      width: 100%;
-      height: 300px;
-      background-color: rgb(225, 236, 255);
-    }
-
-    .adver {
-      width: 100%;
-      height: 500px;
-      background-color: rgb(212, 212, 212);
-
-
-    } */
-  </style>
-
-  <script>
-    window.onload = function () {
-      const kindWrap = document.querySelector('.kind_wrap');
-      const slider = kindWrap.querySelector('.slider');
-      const slideList = slider.querySelectorAll('li')
-      const moveButton = kindWrap.querySelector('.arrow');
-
-      /* ul 넓이 계산해 주기 */
-      const liWidth = slideList[0].clientWidth;
-      const sliderWidth = liWidth * slideList.length;
-      slider.style.width = `${sliderWidth}px`;
-
-      /* 리스너 설치하기 */
-      let currentIdx = 0; // 슬라이드 현재 번호
-      let translate = 0; // 슬라이드 위치 값
-      moveButton.addEventListener('click', moveSlide);
-
-      function moveSlide(event) {
-        event.preventDefault();
-        console.log(event.target)
-        if (event.target.className === 'next') {
-          if (currentIdx !== slideList.length - 1) {
-            translate = translate - liWidth;
-            slider.style.transform = `translateX(${translate}px)`;
-            currentIdx += 1;
-          }
-        } else if (event.target.className === 'prev') {
-          if (currentIdx !== 0) {
-            translate += liWidth;
-            slider.style.transform = `translateX(${translate}px)`;
-            currentIdx -= 1;
-          }
-        }
-      }
-    }
-
-  </script>
 </head>
 
-<body>
-  <header>
-    <div class="header">
-      <div class="search_container">
-        <input type="text" placeholder="검색창" />
-        <button class="search_button">
-          <img src="../img/search.svg" alt="검색 아이콘" />
-        </button>
-      </div>
-      <div class="title">COSTCO</div>
-      <div class="info-container">
-        <div class="account">
-          <button class="info">로그인 / 회원가입</button>
-          <p class="info">|</p>
-          <button class="info">고객센터</button>
-        </div>
-        <div class="vector">
-          <button>
-            <img src="../img/map_point.svg" alt="위치" class="info-icon" /></button><button>
-            <img src="../img/heart.svg" alt="하트" class="info-icon" /></button><button>
-            <img src="../img/cart.svg" alt="쇼핑" class="info-icon" />
-          </button>
-        </div>
-      </div>
+
+<header>
+  <div class="search_container">
+    <input type="text" placeholder="검색창" />
+    <button class="search_button">
+      <img src="../img/search.svg" alt="검색 아이콘" />
+    </button>
+  </div>
+  <div class="title">COSTCO</div>
+  <div class="info-container">
+    <div class="account">
+      <button class="info">로그인 / 회원가입</button>
+      <p class="info">|</p>
+      <button class="info">고객센터</button>
     </div>
-  </header>
-
-
-
-
-
-
-  <div class="kind_wrap">
-    <div class="kind_slider">
-      <ul class="slider">
-        <li><img src="https://via.placeholder.com/800x200.png?text=1" alt=""></li>
-        <li><img src="https://via.placeholder.com/800x200.png?text=2" alt=""></li>
-        <li><img src="https://via.placeholder.com/800x200.png?text=3" alt=""></li>
-        <li><img src="https://via.placeholder.com/800x200.png?text=4" alt=""></li>
-        <li><img src="https://via.placeholder.com/800x200.png?text=5" alt=""></li>
-      </ul>
-    </div>
-    <div class="arrow">
-      <a href="" class="prev">이전</a>
-      <a href="" class="next">다음</a>
+    <div class="vector">
+      <button>
+        <img src="../img/map_point.svg" alt="위치" class="info-icon" /></button><button>
+        <img src="../img/heart.svg" alt="하트" class="info-icon" /></button><button>
+        <img src="../img/cart.svg" alt="쇼핑" class="info-icon" />
+      </button>
     </div>
   </div>
-  <!-- <div class="header"></div>
-  <div class="category"></div> -->
+</header>
 
-</body>
+<div class="section">
+
+</div>
+
 
 </html>
