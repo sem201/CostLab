@@ -3,151 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>particuler_page</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../css/shopping_list.css" />
   </head>
   <body>
     <header>
-      <div class="search_container">
-        <input type="text" placeholder="검색창" />
-        <button class="search_button">
-          <img src="../img/search.svg" alt="검색 아이콘" />
-        </button>
-      </div>
-      <div class="title">COSTCO</div>
-      <div class="info-container">
-        <div class="account">
-          <button class="info">로그인 / 회원가입</button>
-          <p class="info">|</p>
-          <button class="info">고객센터</button>
-        </div>
-        <div class="vector">
-          <button>
-            <img
-              src="../img/map_point.svg"
-              alt="위치"
-              class="info-icon"
-            /></button
-          ><button>
-            <img src="../img/heart.svg" alt="하트" class="info-icon" /></button
-          ><button>
-            <img src="../img/cart.svg" alt="쇼핑" class="info-icon" />
+      <div class="header">
+        <div class="search_container">
+          <input type="text" placeholder="검색창" />
+          <button class="search_button">
+            <img src="../img/search.svg" alt="검색 아이콘" />
           </button>
+        </div>
+        <div class="title">COSTCO</div>
+        <div class="info-container">
+          <div class="account">
+            <button class="info">로그인 / 회원가입</button>
+            <p class="info"></p>
+            <button class="info">고객센터</button>
+          </div>
+          <div class="vector">
+            <button>
+              <img
+                src="../img/map_point.svg"
+                alt="위치"
+                class="info-icon"
+              /></button
+            ><button>
+              <img
+                src="../img/heart.svg"
+                alt="하트"
+                class="info-icon"
+              /></button
+            ><button>
+              <img src="../img/cart.svg" alt="쇼핑" class="info-icon" />
+            </button>
+          </div>
         </div>
       </div>
     </header>
-    <hr />
-    <div class="main_container">
-      <div class="main_header"><h2>장바구니</h2></div>
-
-      <div class="cart_container">
-        <div class="delivery">
-          <button class="choose">일반배송</button
-          ><button class="none">매장배송</button>
-        </div>
-        <div class="cart_content">
-          <div class="cart_content_left">
-            <ul class="group_header">
-              <li>상품정보</li>
-              <li>수량</li>
-              <li>주문금액</li>
-            </ul>
-            <div style="margin-top: 50px"></div>
-            <ul class="choose_list">
-              <li>
-                <img src="../img/rice.webp" />
-                <div class="goods_box">
-                  <div class="goods_detail" style="min-width: 350px">
-                    동물복지 인증 유정란으로 만든 계란(10입)
-                  </div>
-                  <div class="goods_count" style="min-width: 80px">1</div>
-                  <div class="goods_price" style="min-width: 170px">9900원</div>
-                </div>
-              </li>
-              <li>
-                <img src="../img/rice.webp" />
-                <div class="goods_box">
-                  <div class="goods_detail" style="min-width: 350px">
-                    동물복지 인증 유정란으로 만든 계란(10입)
-                  </div>
-                  <div class="goods_count" style="min-width: 80px">1</div>
-                  <div class="goods_price" style="min-width: 170px">9900원</div>
-                </div>
-              </li>
-              <li>
-                <img src="../img/rice.webp" />
-                <div class="goods_box">
-                  <div class="goods_detail" style="min-width: 350px">
-                    동물복지 인증 유정란으로 만든 계란(10입)
-                  </div>
-                  <div class="goods_count" style="min-width: 80px">1</div>
-                  <div class="goods_price" style="min-width: 170px">9900원</div>
-                </div>
-              </li>
-              <li>
-                <img src="../img/rice.webp" />
-                <div class="goods_box">
-                  <div class="goods_detail" style="min-width: 350px">
-                    동물복지 인증 유정란으로 만든 계란(10입)
-                  </div>
-                  <div class="goods_count" style="min-width: 80px">1</div>
-                  <div class="goods_price" style="min-width: 170px">9900원</div>
-                </div>
-              </li>
-              <li>
-                <img src="../img/rice.webp" />
-                <div class="goods_box">
-                  <div class="goods_detail" style="min-width: 350px">
-                    동물복지 인증 유정란으로 만든 계란(10입)
-                  </div>
-                  <div class="goods_count" style="min-width: 80px">1</div>
-                  <div class="goods_price" style="min-width: 170px">9900원</div>
-                </div>
-              </li>
-              <li>
-                <img src="../img/rice.webp" />
-                <div class="goods_box">
-                  <div class="goods_detail" style="min-width: 350px">
-                    동물복지 인증 유정란으로 만든 계란(10입)
-                  </div>
-                  <div class="goods_count" style="min-width: 80px">1</div>
-                  <div class="goods_price" style="min-width: 170px">9900원</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="cart_content_right">
-            <div class="cart_total">
-              <p
-                style="
-                  margin-bottom: 16px;
-                  font-size: 18px;
-                  font-weight: 500;
-                  line-height: 26px;
-                "
-              >
-                결제 예정금액
-              </p>
-              <div class="total">
-                <div>
-                  <p class="total_text">총 상품금액</p>
-                  <p class="total_text">총 할인금액</p>
-                  <p class="total_text">총 배송비</p>
-                  <p class="total_text" style="margin-top: 20px">총 주문금액</p>
-                </div>
-
-                <div>
-                  <p>9900원</p>
-                  <p>-4000원</p>
-                  <p>-3000원</p>
-                  <p style="color: #ff752a; margin-top: 20px">8900원</p>
-                </div>
-              </div>
-            </div>
-            <button class="purchase">구매하기</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
