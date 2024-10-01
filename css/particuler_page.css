@@ -62,13 +62,30 @@ main {
 }
 
 #product-detail {
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 100px;
 }
 
-#product-detail img {
-  max-width: 300px;
+#product-detail .p-d-left img {
+  max-width: 600px;
+  padding: 50px;
+}
+
+#product-detail .p-d-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#product-detail .p-d-right h2 {
+  font-size: 2.3rem;
+}
+
+#product-detail .p-d-right p {
+  font-size: 1.3rem;
 }
 
 textarea {
@@ -83,4 +100,13 @@ main button {
   padding: 10px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.quantity-container {
+  display: block;
+}
+
+#comment {
+  width: 1200px;
+  margin: 0 auto;
 }
