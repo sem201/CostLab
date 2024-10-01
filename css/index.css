@@ -47,9 +47,8 @@ button {
   width: 30px;
   height: 30px;
 }
-
 /*카테고리*/
-.category {
+.categor {
   position: fixed;
   top: 15vh;
   width: 100%;
@@ -58,40 +57,59 @@ button {
   color: black;
   display: flex;
   z-index: 10;
+  margin-left: 80px;
 
   /*justify-content: space-between;*/
 }
-.menuicon {
-  margin-left: 2px;
+
+.categor > ul:first-child {
+  font-size: 15px;
 }
 
-.category h2 {
-  text-align: center;
-  margin-left: 20px;
-}
-.category h2:hover {
-  scale: 1.2;
+.categor h2:hover {
+  scale: 1.07;
   cursor: pointer;
 }
 
-.category ul {
-  list-style: none;
-}
-
-.category ul li:hover {
-  scale: 1.2;
+.categor ul li:hover {
+  scale: 1.05;
   cursor: pointer;
 }
 
-.category ul {
+.categor ul {
   display: flex;
-  gap: 100px;
+  gap: 70px;
+  list-style: none;
 }
 
 .slide_div {
   justify-content: center;
 }
 
+/*드롭다운*/
+.drop {
+  position: relative;
+  display: inline-block;
+}
+.down {
+  display: none;
+  position: absolute;
+  z-index: 9;
+}
+.down a {
+  display: block;
+}
+
+.dbtn {
+  border: none;
+  cursor: pointer;
+}
+.down a:hover {
+  background-color: #bbbbbb;
+}
+.drop:hover .down {
+  display: block;
+}
 /*메인*/
 
 main {
@@ -100,28 +118,72 @@ main {
   margin-left: 100px;
   margin-right: 100px;
 }
-
+.MainSlider img {
+  width: 100%;
+}
+.MainSlider:hover {
+  cursor: pointer;
+}
 .ProductSlider {
-  width: calc(100vw - 200px);
+  width: 100%;
   height: 800px;
   background-color: rgb(255, 232, 232);
-}
-.itembox {
-  width: 300px;
-  height: 300px;
-  background-color: red;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
+/*이미지 영역*/
+.card {
+  width: 18%;
+  height: 350px;
+  border: 1px solid #e6cbcb;
+  background-color: #e6cbcb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card img {
+  width: 100%;
+}
+.name {
+  opacity: 0.8;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.description {
+  opacity: 0.8;
+  font-size: 14px;
+}
+.price {
+  opacity: 0.8;
+  font-size: 20px;
+  font-weight: 800;
+}
+.card:hover {
+  scale: 1.03;
+  cursor: pointer;
+}
+
+/*광고*/
 .Advertiser {
-  width: calc(100vw - 200px);
+  width: 100%;
   height: 300px;
-  background-color: skyblue;
+  background-color: white;
 }
-
+.Advertiser:hover {
+  cursor: pointer;
+}
+.Advertiser img {
+  width: 100%;
+}
 .Recommend {
-  width: calc(100vw - 200px);
+  width: 100%;
   height: 800px;
-  background-color: yellow;
+  background-color: rgb(255, 235, 235);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 footer {
