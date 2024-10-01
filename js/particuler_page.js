@@ -1,5 +1,3 @@
-// 로컬 스토리지에서 상품 데이터 가져오기
-
 // URL에서 productId를 가져옴
 
 const urlParams = new URLSearchParams(window.location.search);
