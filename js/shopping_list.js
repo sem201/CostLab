@@ -79,3 +79,28 @@ function createProductData() {
 }
 createProductData();
 const products = JSON.parse(localStorage.getItem("productList"));
+
+let ProductSlider = document.querySelector(".ProductSlider");
+
+for (let i = 0; i < products.length; i++) {
+  // 요소 생성
+  const divBox = document.createElement("div");
+
+  const img = document.createElement("img");
+  img.setAttribute("src", `../img/${products[i].image}`);
+  //요소.classlist.add(클래스명)
+  const divBox2 = document.createElement("div");
+  divBox2.innerHtml = products[i].name;
+  const divBox3 = document.createElement("div");
+  divBox3.innerHTML = products[i].description;
+  const divBox4 = document.createElement("div");
+  divBox4.innerHTML = products[i].price;
+  const divBox5 = document.createElement("div");
+  divBox5.innerHTML = products[i].category;
+
+  divBox.append(img, divBox2, divBox3, divBox4, divBox5);
+  console.log(divBox);
+  ProductSlider.append(divBox);
+
+  // 자식요소 추가 (요소.append(추가할 요소 ))
+}
