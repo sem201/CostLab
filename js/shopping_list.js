@@ -97,20 +97,31 @@ let ProductSlider = document.querySelector(".ProductSlider");
 for (let i = 0; i < products.length; i++) {
   // 요소 생성
   const divBox = document.createElement("div");
+  divBox.classList.add("card");
 
+  const divBox1 = document.createElement("div");
   const img = document.createElement("img");
   img.setAttribute("src", `../img/${products[i].image}`);
+  divBox1.append(img);
+  divBox1.classList.add("image");
   //요소.classlist.add(클래스명)
   const divBox2 = document.createElement("div");
   divBox2.innerHtml = products[i].name;
+  divBox2.classList.add("name");
+
   const divBox3 = document.createElement("div");
   divBox3.innerHTML = products[i].description;
+  divBox3.classList.add("description");
+
   const divBox4 = document.createElement("div");
   divBox4.innerHTML = products[i].price;
-  const divBox5 = document.createElement("div");
-  divBox5.innerHTML = products[i].category;
+  divBox4.classList.add("price");
 
-  divBox.append(img, divBox2, divBox3, divBox4, divBox5);
+  const divBox5 = document.createElement("div");
+  divBox5.innerText = products[i].category;
+  divBox5.classList.add("category");
+
+  divBox.append(divBox1, divBox2, divBox3, divBox4, divBox5);
   console.log(divBox);
   ProductSlider.append(divBox);
 
