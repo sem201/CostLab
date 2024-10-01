@@ -38,3 +38,15 @@ window.onload = () => {
       "이미지를 찾을 수 없습니다.";
   }
 };
+
+// 장바구니 담기
+function addToCart() {
+  // 로컬스토리지에서 기존 장바구니 데이터를 가져옴
+  let shoppingList = localStorage.getItem("shoppingList");
+
+  // shoppingList가 null인 경우 빈 배열로 초기화
+  shoppingList = shoppingList ? JSON.parse(shoppingList) : [];
+  let id = urlParams.get("id");
+  shoppingList.push(id); // 새로운 상품 ID 추가
+  localStorage.setItem("shoppingList", JSON.stringify(shoppingList)); // 다시 로컬스토리지에 저장
+}

@@ -15,7 +15,6 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
 }
 .header input {
   width: 167px;
@@ -135,6 +134,15 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.goods_detail {
+  min-width: 350px;
+}
+.goods_count {
+  min-width: 80px;
+}
+.goods_price {
+  min-width: 170px;
 }
 .choose_list img {
   width: 76px;
