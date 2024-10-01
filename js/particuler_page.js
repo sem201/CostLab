@@ -1,11 +1,9 @@
 // 로컬 스토리지에서 상품 데이터 가져오기
 
-const products = JSON.prase(localStorage.getItem(`productList`));
-
 // URL에서 productId를 가져옴
 
 const urlParams = new URLSearchParams(window.location.search);
-const productId = praseInt(urlParams.get(`id`), 10);
+const productId = parseInt(urlParams.get(`id`), 10);
 
 // 상품 상세 정보 렌더링
 
