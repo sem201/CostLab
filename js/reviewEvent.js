@@ -1,8 +1,17 @@
-new fullpage("#fullpage", {
-  navigation: true,
-  navigationPosition: "right",
+$(document).ready(function () {
+  $("#fullpage").fullpage({
+    //options here
+    autoScrolling: true,
+    scrollHorizontally: true,
+    navigation: true,
+  });
 });
 
 function showAlert() {
-  alert("할인쿠폰을 받으셨습니다!");
+  Swal.fire({
+    title: "쿠폰이 발급되었습니다!",
+    text: "보관함을 확인하세요!",
+    icon: "success",
+    backdrop: true,
+  });
 }
