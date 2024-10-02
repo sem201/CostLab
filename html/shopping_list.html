@@ -6,7 +6,6 @@
     <title>particuler_page</title>
     <link rel="stylesheet" href="../css/shopping_list.css" />
   </head>
-  <script src="../js/shopping.js"></script>
   <body>
     <header>
       <div class="search_container">
@@ -43,8 +42,12 @@
 
       <div class="cart_container">
         <div class="delivery">
-          <button class="choose">일반배송</button
-          ><button class="none">매장배송</button>
+          <button
+            class="choose deliveryBtn"
+            style="border-right: 1px solid #d6d6d6"
+          >
+            일반배송</button
+          ><button class="none deliveryBtn">매장배송</button>
         </div>
         <div class="cart_content">
           <div class="cart_content_left">
@@ -53,8 +56,8 @@
               <li>수량</li>
               <li>주문금액</li>
             </ul>
-            <div style="margin-top: 50px"></div>
-            <ul class="choose_list"></ul>
+            <div style="height: 50px; background-color: white"></div>
+            <ul class="choose_list empty"></ul>
           </div>
           <div class="cart_content_right">
             <div class="cart_total">
@@ -71,16 +74,16 @@
               <div class="total">
                 <div>
                   <p class="total_text">총 상품금액</p>
-                  <p class="total_text">총 할인금액</p>
                   <p class="total_text">총 배송비</p>
                   <p class="total_text" style="margin-top: 20px">총 주문금액</p>
                 </div>
 
                 <div>
-                  <p>9900원</p>
-                  <p>-4000원</p>
-                  <p>-3000원</p>
-                  <p style="color: #ff752a; margin-top: 20px">8900원</p>
+                  <p id="total_product_price">0원</p>
+                  <p id="delivery_price"></p>
+                  <p id="total_price" style="color: #ff752a; margin-top: 20px">
+                    0원
+                  </p>
                 </div>
               </div>
             </div>
@@ -89,5 +92,25 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/shopping.js"></script>
+    <script>
+      const purchase = document.querySelector(".purchase");
+      purchase.addEventListener("click", function () {
+        if (shopping) {
+          Swal.fire({
+            title: "구매가 완료되었습니다!",
+            text: "다른 상품도 둘러보세요!",
+            icon: "success",
+          });
+        } else {
+          Swal.fire({
+            title: "구매에 실패했습니다!",
+            text: "장바구니에 물건을 담은 후 구매해주세요!",
+            icon: "error",
+          });
+        }
+      });
+    </script>
   </body>
 </html>

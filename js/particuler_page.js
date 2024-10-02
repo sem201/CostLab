@@ -47,6 +47,8 @@ function addToCart() {
   // shoppingList가 null인 경우 빈 배열로 초기화
   shoppingList = shoppingList ? JSON.parse(shoppingList) : [];
   let id = urlParams.get("id");
-  shoppingList.push(id); // 새로운 상품 ID 추가
+  let productCount = document.querySelector("#quantity").value;
+  shoppingList.push([id, productCount]); // 새로운 상품 ID 추가
+  console.log(shoppingList);
   localStorage.setItem("shoppingList", JSON.stringify(shoppingList)); // 다시 로컬스토리지에 저장
 }

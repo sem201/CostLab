@@ -157,7 +157,9 @@ for (let i = 0; i < products.length; i++) {
   divBox5.classList.add("category");
 
   divBox.append(divBox1, divBox2, divBox3, divBox4, divBox5);
-  console.log(divBox);
+  divBox.addEventListener("click", function () {
+    window.location.href = `particuler_page.html?id=${products[i].id}`;
+  });
   ProductSlider.append(divBox);
 
   // 자식요소 추가 (요소.append(추가할 요소 ))
