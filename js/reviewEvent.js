@@ -1,9 +1,9 @@
 $(document).ready(function () {
   $("#fullpage").fullpage({
-    //options here
     autoScrolling: true,
-    // scrollHorizontally: true,
-    // navigation: true,
+    scrollHorizontally: true,
+    navigation: true,
+    scrollOverflow: true, // 이 옵션을 추가
   });
 });
 
