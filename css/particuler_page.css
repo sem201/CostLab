@@ -3,9 +3,18 @@
   box-sizing: border-box;
 }
 
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+li {
+  list-style-type: none;
 }
 header {
   box-sizing: border-box;
@@ -18,16 +27,16 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
-}
-.header input {
-  width: 167px;
-  height: 44px;
+  background-color: #fff;
+  z-index: 10;
 }
 button {
   background-color: inherit;
   border: 0;
   cursor: pointer;
+}
+.search_container {
+  min-width: 220px;
 }
 .search_button {
   width: 42px;
@@ -46,6 +55,7 @@ button {
 .account {
   display: flex;
   flex-direction: row;
+  min-width: 220px;
 }
 .info {
   font-size: 16px;
@@ -61,12 +71,16 @@ main {
   top: 15vh;
 }
 
+section {
+  padding: 50px 0;
+}
+
 #product-detail {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 100px;
 }
 
 #product-detail .p-d-left img {
@@ -78,6 +92,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 50px;
 }
 
 #product-detail .p-d-right h2 {
@@ -102,35 +117,218 @@ main button {
   margin-top: 10px;
 }
 
-.quantity-container {
-  display: block;
-}
-
 #comment {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .quantity-container {
+  display: flex;
   width: 100%;
-  height: 50px;
-  background-color: #f9f9f9;
+  align-items: center;
 }
 
 .quantity-container button {
+  position: relative;
   width: 30px;
   height: 30px;
   background-color: transparent;
-  color: #0060a9;
-  border: 2px solid #0060a9;
+  color: #000000;
+  border: 2px solid #80c342;
   border-radius: 50%;
+  margin: 0;
+}
+
+.quantity-container button i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .quantity-container input {
   width: 50px;
   height: 30px;
+  border: none;
+  font-size: 21px;
+  text-align: center;
 }
 
 #comment {
   text-align: center;
+  margin: 0 auto;
+}
+
+#comment h2 {
+  font-size: 33px;
+}
+
+#comment-input {
+  border: 1px solid #000;
+}
+
+#comment-button {
+  background-color: #80c342;
+  font-size: 19px;
+  border-radius: 10px;
+}
+
+#comment-button:active {
+  transform: scale(0.95);
+}
+
+#comment-list {
+  text-align: left;
+  max-width: 100%;
+  padding-left: 0;
+}
+
+#comment textarea {
+  font-size: 21px;
+}
+
+#comment textarea::placeholder {
+  font-size: 21px;
+}
+
+#comment-list li {
+  height: 100%;
+  margin: 15px 0;
+  padding: 50px 0;
+  font-size: 21px;
+  border-bottom: 1px solid #000000;
+}
+
+#add-to-cart {
+  width: 200px;
+  margin: 0 auto;
+  font-size: 21px;
+  background-color: #80c342;
+  border-radius: 30px;
+}
+
+footer {
+  padding: 100px 0;
+  position: relative;
+  top: 15vh;
+  width: 100%;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer ul {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+@media (375px <= width < 768px) {
+  /*header*/
+  header {
+    box-sizing: border-box;
+    padding: 0 2em;
+  }
+  .search_container {
+    display: none;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .vector {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .account {
+    justify-content: flex-end;
+    min-width: 150px;
+  }
+  .info {
+    font-size: 10px;
+  }
+  .info-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  main {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  #product-detail {
+    width: 100%;
+    display: block;
+  }
+
+  #product-detail .p-d-left img {
+    max-width: 100%;
+    padding: 50px;
+  }
+
+  #product-detail .p-d-right {
+    text-align: center;
+  }
+
+  .quantity-container {
+    justify-content: center;
+  }
+
+  #comment {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  footer ul {
+    display: block;
+    padding: 0 0 50px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  #product-detail {
+    width: 100%;
+    display: block;
+  }
+
+  #product-detail .p-d-left img {
+    max-width: 100%;
+    padding: 50px;
+  }
+
+  #product-detail .p-d-right {
+    text-align: center;
+  }
+
+  .quantity-container {
+    justify-content: center;
+  }
+
+  #comment {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    display: none;
+  }
 }
