@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>particuler_page</title>
+    <title>COSTCO</title>
+    <!-- fontawsome 가져오기 -->
+    <script
+      src="https://kit.fontawesome.com/1f1be3aed3.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../css/particuler_page.css" />
     <script src="../js/shopping_list.js"></script>
     <script src="../js/particuler_page.js"></script>
   </head>
   <body>
     <header>
-      <div class="search_container">
-        <input type="text" placeholder="검색창" />
-        <button class="search_button">
-          <img src="../img/search.svg" alt="검색 아이콘" />
-        </button>
-      </div>
+      <div class="search_container"></div>
       <div class="title">COSTCO</div>
       <div class="info-container">
         <div class="account">
@@ -33,7 +33,9 @@
           ><button>
             <img src="../img/heart.svg" alt="하트" class="info-icon" /></button
           ><button>
-            <img src="../img/cart.svg" alt="쇼핑" class="info-icon" />
+            <a href="http://127.0.0.1:5500/html/shopping_list.html"
+              ><img src="../img/cart.svg" alt="쇼핑" class="info-icon"
+            /></a>
           </button>
         </div>
       </div>
@@ -45,9 +47,10 @@
       <section id="product-detail">
         <!-- 상품 상세 정보가 여기에 렌더링 됨 -->
       </section>
+      <hr />
       <section id="comment">
         <h2>상품 후기</h2>
-
+        <br />
         <textarea
           id="comment-input"
           class="comment-input"
@@ -55,13 +58,38 @@
           placeholder="댓글을 입력하세요."
         ></textarea>
         <br />
-        <button onclick="click32()" id="comment-button" class="comment-button">
-          댓글 등록
-        </button>
+        <button id="comment-button" class="comment-button">댓글 등록</button>
         <ul id="comment-list" class="comment-list">
           <!-- 댓글 목록이 여기 표시됩니다. -->
         </ul>
       </section>
     </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <ul>
+          <li>사이트맵</li>
+          <li>이용약관</li>
+          <li>개인정보처리방침</li>
+          <li>영상정보처리기기운영*관리방침</li>
+          <li>상표사용지침</li>
+        </ul>
+        <div class="footer-description">
+          <p>(주)코스트코 코리아</p>
+          <p>
+            14347 경기도 광명시 일직로 40 (일직동 163-3) | 대표자 : 조민수 |
+            사업자 등록번호 : 107-81-63829 | 통신판매업 신고번호 :
+            제2013-경기광명-0013호 | 전화 : 1899-9900 | E-mail : 고객센터 문의
+            바로가기 ▶ (매장/온라인) | 개인 정보 보호책임자 : 한신(E-mail :
+            webmanager@costcokr.com) | 호스팅제공자 : Google Ireland Ltd. |
+            사업자정보확인
+          </p>
+        </div>
+        <div class="footer-c">
+          <p>© 2024 Costco Wholesale Corporation. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
