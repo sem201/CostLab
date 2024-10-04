@@ -8,15 +8,19 @@ window.onload = () => {
   const deliveryPrice = document.querySelector("#delivery_price");
   let sum = 0;
   let userDeliveryPrice;
-  if (shopping) {
+  if (shopping.length > 0) {
     userDeliveryPrice = 3000;
-    deliveryPrice.innerText = `${userDeliveryPrice}원`;
+    deliveryPrice.innerText = `${userDeliveryPrice.toLocaleString()}원`;
     shopping.forEach((shoppingItem) => {
       const shoppingId = parseInt(shoppingItem[0]); // 첫 번째 인덱스 값
       const item = product.find((p) => p.id === shoppingId); // 해당 id와 일치하는 상품 찾기
       const productCount = parseInt(shoppingItem[1]);
       if (item) {
         const li = document.createElement("li");
+        li.setAttribute("data-id", shoppingId);
+        const input = document.createElement("input");
+        input.setAttribute("type", "checkbox");
+        input.checked = true;
 
         const img = document.createElement("img");
         img.src = `../img/${item.image}`;
@@ -30,17 +34,36 @@ window.onload = () => {
 
         const goodsCount = document.createElement("div");
         goodsCount.classList.add("goods_count");
-        goodsCount.innerText = productCount;
+        goodsCount.innerText = `${productCount}개`;
 
         const goodsPrice = document.createElement("div");
         goodsPrice.classList.add("goods_price");
+
+        const button = document.createElement("button");
+        button.classList.add("goods_delete");
+        button.innerText = "상품삭제";
+
+        button.addEventListener("click", function () {
+          const itemIndex = shopping.findIndex(
+            (shoppingItem) => shoppingItem[0] === shoppingId.toString()
+          );
+          shopping.splice(itemIndex, 1);
+          localStorage.setItem("shoppingList", JSON.stringify(shopping));
+          li.remove();
+          updateTotal();
+        });
+
         let productPrice = parseInt(item.price.replace(/[^0-9]/g, ""));
         sum += productPrice;
-        goodsPrice.innerText = `${productPrice * productCount}원`;
 
+        goodsPrice.innerText = `${(
+          productPrice * productCount
+        ).toLocaleString()}원`;
         goodsBox.append(goodsDetail, goodsCount, goodsPrice);
-        li.append(img, goodsBox);
+        li.append(input, img, goodsBox, button);
         ul.append(li);
+
+        input.addEventListener("change", updateTotal);
       }
     });
   } else {
@@ -50,11 +73,34 @@ window.onload = () => {
   }
   // 총 가격 가져오기
   const totalProductPrice = document.querySelector("#total_product_price");
-  totalProductPrice.innerText = `${sum}원`;
+  totalProductPrice.innerText = `${sum.toLocaleString()}원`;
   const totalPrice = document.querySelector("#total_price");
 
-  totalPrice.innerText = `${sum - userDeliveryPrice}원`;
+  totalPrice.innerText = `${(sum - userDeliveryPrice).toLocaleString()}원`;
+  function updateTotal() {
+    let sum = 0;
+    let checkedCount = 0;
+    document.querySelectorAll(".choose_list li").forEach((li) => {
+      const checkbox = li.querySelector("input[type='checkbox']");
 
+      if (checkbox.checked) {
+        checkedCount++;
+        const shoppingId = parseInt(li.getAttribute("data-id"));
+        const item = product.find((p) => p.id === shoppingId);
+        const productCount = shopping.find(
+          (s) => parseInt(s[0]) === shoppingId
+        )[1];
+        const itemPrice = parseInt(item.price.replace(/[^0-9]/g, ""));
+        sum += itemPrice * productCount;
+      }
+    });
+    if (checkedCount === 0) {
+      userDeliveryPrice = 0;
+      deliveryPrice.innerText = `${userDeliveryPrice}원`;
+    }
+    totalProductPrice.innerText = `${sum.toLocaleString()}원`;
+    totalPrice.innerText = `${(sum + userDeliveryPrice).toLocaleString()}원`;
+  }
   // 이전 코드
   // for (let item of product) {
   //   if (shopping.includes(String(item.id))) {
