@@ -133,7 +133,7 @@ for (let i = 0; i < products.length; i++) {
   // 요소 생성
   const divBox = document.createElement("div");
   divBox.classList.add("card");
-
+  console.log(products[i].name);
   const divBox1 = document.createElement("div");
   const img = document.createElement("img");
   img.setAttribute("src", `../img/${products[i].image}`);
@@ -141,22 +141,14 @@ for (let i = 0; i < products.length; i++) {
   divBox1.classList.add("image");
   //요소.classlist.add(클래스명)
   const divBox2 = document.createElement("div");
-  divBox2.innerHtml = products[i].name;
+  divBox2.innerText = products[i].name;
   divBox2.classList.add("name");
-
-  const divBox3 = document.createElement("div");
-  divBox3.innerHTML = products[i].description;
-  divBox3.classList.add("description");
 
   const divBox4 = document.createElement("div");
   divBox4.innerHTML = products[i].price;
   divBox4.classList.add("price");
 
-  const divBox5 = document.createElement("div");
-  divBox5.innerText = products[i].category;
-  divBox5.classList.add("category");
-
-  divBox.append(divBox1, divBox2, divBox3, divBox4, divBox5);
+  divBox.append(divBox1, divBox2, divBox4);
   divBox.addEventListener("click", function () {
     window.location.href = `particuler_page.html?id=${products[i].id}`;
   });
