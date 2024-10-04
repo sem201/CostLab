@@ -1,121 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Costco</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Costco</title>
-  <link rel="stylesheet" href="../css/index.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"
+      integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM="
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"
-    integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
 
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-</head>
-
-
-<br>
-<!-- Header 시맨틱 태그-->
-<header>
-
-
-  <div class="search_container">
-
-    <input type="text" placeholder="검색창" />
-    <button class="search_button">
-
-      <img src="../img/search.svg" alt="검색 아이콘" />
-    </button>
-
-  </div>
-  <div class="title">COSTCO</div>
-  <div class="info-container">
-    <div class="account">
-      <button class="info">로그인 / 회원가입</button>
-      <p class="info">|</p>
-      <button class="info">고객센터</button>
-    </div>
-
-    <div class="vector">
-      <button>
-        <img src="../img/map_point.svg" alt="위치" class="info-icon" /></button><button>
-        <img src="../img/heart.svg" alt="하트" class="info-icon" /></button><button>
-        <img src="../img/cart.svg" alt="쇼핑" class="info-icon" />
-      </button>
-    </div>
-  </div>
-
-
-
-</header>
-<div class="categor">
-  <!-- <i class='bx bx-menu'></i> -->
-
-  <ul>
-    <li>
-      <div class="drop">
-        <span>카테고리</span>
-        <div class="down">
-          <a href="#">상품</a>
-          <a href="#">상품</a>
-          <a href="#">상품</a>
+  <!-- Header 시맨틱 태그-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>particuler_page</title>
+    <link rel="stylesheet" href="../css/shopping_list.css" />
+  </head>
+  <body>
+    <header>
+      <div class="search_container"></div>
+      <a href="http://127.0.0.1:5500/html/index.html"
+        ><div class="title">COSTCO</div></a
+      >
+      <div class="info-container">
+        <div class="account">
+          <button class="info">로그인 / 회원가입</button>
+          <p class="info">|</p>
+          <button class="info">고객센터</button>
         </div>
-
+        <div class="vector">
+          <button>
+            <img
+              src="../img/map_point.svg"
+              alt="위치"
+              class="info-icon"
+            /></button
+          ><button>
+            <img src="../img/heart.svg" alt="하트" class="info-icon" /></button
+          ><button>
+            <a href="http://127.0.0.1:5500/html/shopping_list.html"
+              ><img src="../img/cart.svg" alt="쇼핑" class="info-icon"
+            /></a>
+          </button>
+        </div>
       </div>
-    </li>
-    <li>베스트 상품</li>
-    <li>이벤트페이지</li>
-    <li>기타</li>
-  </ul>
-</div>
-<br />
+    </header>
+    <div class="categor">
+      <!-- <i class='bx bx-menu'></i> -->
 
-<hr />
-
-
-<!-- 카테고리 -->
-
-
-<!-- Main 시맨틱 태그 -->
-<main>
-  <!-- Main Slider 페이지 -->
-  <div class="MainSlider">
-    <div class="slide_div">
-      <div>
-        <a>
-          <img src="../img/M_Slider1.webp">
-        </a>
-      </div>
-      <div>
-        <a>
-          <img src="../img/M_Slider2.webp">
-        </a>
-      </div>
-      <div>
-        <a>
-          <img src="../img/M_Slider3.webp">
-        </a>
-      </div>
+      <ul>
+        <li>
+          <div class="drop">
+            <span>카테고리</span>
+            <div class="down">
+              <a href="#">상품</a>
+              <a href="#">상품</a>
+              <a href="#">상품</a>
+            </div>
+          </div>
+        </li>
+        <li>베스트 상품</li>
+        <li>이벤트페이지</li>
+        <li>기타</li>
+      </ul>
     </div>
     <br />
 
-  </div>
-  <!-- Product Slider 페이지 -->
-  <div class="ProductSlider">
-  </div>
-  <br /><br />
-  <!-- Advertiser 페이지 -->
-  <div class="Advertiser">
-    <img src="../img/M_b.webp" alt="">
-  </div>
-  <br /><br />
+    <!-- 카테고리 -->
 
-  <!-- Recommend 페이지 -->
-  <h2>베스트 상품 추천</h2>
+    <!-- Main 시맨틱 태그 -->
+    <main>
+      <!-- Main Slider 페이지 -->
+      <div class="MainSlider">
+        <div class="slide_div">
+          <div>
+            <a>
+              <img src="../img/M_Slider1.webp" />
+            </a>
+          </div>
+          <div>
+            <a>
+              <img src="../img/M_Slider2.webp" />
+            </a>
+          </div>
+          <div>
+            <a>
+              <img src="../img/M_Slider3.webp" />
+            </a>
+          </div>
+        </div>
+        <br />
+      </div>
+      <!-- Product Slider 페이지 -->
+      <div class="ProductSlider"></div>
+
+      <br /><br />
+      <!-- Advertiser 페이지 -->
+      <div class="Advertiser">
+        <img src="../img/M_b.webp" alt="" />
+      </div>
+      <br /><br />
+
+      <!-- Recommend 페이지 -->
+      <!-- <h2>베스트 상품 추천</h2>
   <div class="Recommend">
     <div class="card">
       <div class="image">
@@ -157,30 +168,49 @@
     </div>
 
 
-  </div>
-</main>
-<br /><br />
-<!-- Footer 시맨틱 태그 -->
-<footer>
+  </div> -->
+    </main>
+    <br /><br />
+    <!-- Footer 시맨틱 태그 -->
+    <footer>
+      <div class="container">
+        <ul>
+          <li>사이트맵</li>
+          <li>이용약관</li>
+          <li>개인정보처리방침</li>
+          <li>영상정보처리기기운영*관리방침</li>
+          <li>상표사용지침</li>
+        </ul>
+        <div class="footer-description">
+          <p>(주)코스트코 코리아</p>
+          <p>
+            14347 경기도 광명시 일직로 40 (일직동 163-3) | 대표자 : 조민수 |
+            사업자 등록번호 : 107-81-63829 | 통신판매업 신고번호 :
+            제2013-경기광명-0013호 | 전화 : 1899-9900 | E-mail : 고객센터 문의
+            바로가기 ▶ (매장/온라인) | 개인 정보 보호책임자 : 한신(E-mail :
+            webmanager@costcokr.com) | 호스팅제공자 : Google Ireland Ltd. |
+            사업자정보확인
+          </p>
+        </div>
+        <div class="footer-c">
+          <p>© 2024 Costco Wholesale Corporation. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/shopping_list.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
 
-
-</footer>
-
-<script src="../js/shopping_list.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<script>
-  $(document).ready(function () {
-    $(".slide_div").slick({
-      dots: true,
-      autoplay: true,
-      autoplaySpeed: 5000
-    });
-  })
-
-</script>
-
-
-</body>
-
+    <script>
+      $(document).ready(function () {
+        $(".slide_div").slick({
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 5000,
+        });
+      });
+    </script>
+  </body>
 </html>
