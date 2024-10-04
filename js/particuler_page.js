@@ -126,11 +126,21 @@ function addToCart() {
   // 로컬스토리지에서 기존 장바구니 데이터를 가져옴
   let shoppingList = localStorage.getItem("shoppingList");
 
-  // shoppingList가 null인 경우 빈 배열로 초기화
   shoppingList = shoppingList ? JSON.parse(shoppingList) : [];
   let id = urlParams.get("id");
   let productCount = document.querySelector("#quantity").value;
-  shoppingList.push([id, productCount]); // 새로운 상품 ID 추가
+
+  // 상품이 이미 장바구니에 있는지 확인
+  const existingProductIndex = shoppingList.findIndex((item) => item[0] === id);
+
+  if (existingProductIndex !== -1) {
+    // 상품이 이미 있는 경우, 수량 업데이트
+    shoppingList[existingProductIndex][1] = productCount;
+  } else {
+    // 상품이 없는 경우, 새로 추가
+    shoppingList.push([id, productCount]);
+  }
+
   console.log(shoppingList);
   localStorage.setItem("shoppingList", JSON.stringify(shoppingList)); // 다시 로컬스토리지에 저장
 }
