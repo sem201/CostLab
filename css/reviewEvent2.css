@@ -16,31 +16,34 @@
 @keyframes pulse {
   0%,
   100% {
-    transform: scale(1); /* 원래 크기 */
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.2); /* 20% 커짐 */
+    transform: scale(1.2);
   }
 }
 
 .section1 {
   background-color: #2a4f7e;
-  padding: 10px; /* 여백 감소 */
+  padding: 10px;
   overflow: hidden;
 }
 
 .section1 h2 {
   color: #ffea00;
-  font-size: 40px; /* 폰트 크기 줄이기 */
+  font-size: 40px;
   font-weight: 400;
   text-shadow: 0 0 1px #ffea00, 0 0 4px #ffea00;
   animation: pulse 1.5s infinite;
-  margin-bottom: 50px; /* 여백 감소 */
+  margin-bottom: 50px;
+  width: 60%;
+  text-align: center;
+  margin: 40px auto 50px;
 }
 
 .section1 strong {
   color: #f78d83;
-  font-size: 120px; /* 폰트 크기 줄이기 */
+  font-size: 100px;
   font-weight: 400;
   text-shadow: 0 0 4px #ff6f61, 0 0 4px #ff6f61;
   animation: pulse 1.5s infinite;
@@ -49,60 +52,94 @@
 .section1 h3 p {
   color: #14286d;
   -webkit-text-stroke: 0.01px #9c9e9f;
-  font-size: 25px; /* 폰트 크기 줄이기 */
+  font-size: 25px;
   font-weight: 400;
-  margin: 5px 0; /* 상하 여백 유지 */
+  margin: 5px 0;
   margin-bottom: 20px;
 }
 
 .section1 h3 {
   color: #333333;
-  font-size: 17px; /* 폰트 크기 줄이기 */
+  font-size: 17px;
   font-weight: 400;
-  margin: 5px 0; /* 여백 줄이기 */
+  margin: 5px 0;
 }
 
 .section1-box {
-  display: flex; /* Flexbox 활성화 */
-  justify-content: center; /* 가로 중앙 정렬 */
-  gap: 50px; /* 박스 간 간격 줄이기 */
-  width: 100%; /* 가로 전체 사용 */
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
 }
 
 .section1-box .box {
-  width: 350px; /* 너비 줄이기 */
-  height: auto; /* 높이를 자동 조정 */
+  width: 350px;
+  height: auto;
   background-color: white;
-  border: 4px solid #b3c7d6; /* 테두리 줄이기 */
-  border-radius: 15px; /* 모서리 둥글게 */
-  display: flex; /* Flexbox 활성화 */
-  flex-direction: column; /* 세로 정렬 */
-  align-items: center; /* 중앙 정렬 */
-  justify-content: space-between; /* 아이콘과 텍스트 사이 여백 */
-  padding: 15px; /* 내부 여백 줄이기 */
+  border: 4px solid #b3c7d6;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
 }
 
 .icon {
-  width: 40px; /* 아이콘 크기 줄이기 */
-  height: 40px; /* 아이콘 크기 줄이기 */
-  margin-top: 5px; /* 위쪽 여백 줄이기 */
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
 }
 
 /* 버튼 스타일 */
 .participate-button {
-  background-color: #f78d83; /* 버튼 배경색 */
-  color: white; /* 글자색 */
-  border: none; /* 테두리 없애기 */
-  border-radius: 5px; /* 모서리 둥글게 */
-  padding: 10px 20px; /* 여백 줄이기 */
-  font-size: 18px; /* 글자 크기 줄이기 */
-  cursor: pointer; /* 마우스 커서 변경 */
-  transition: background-color 0.3s; /* 배경색 변화 애니메이션 */
-  margin-top: 15px; /* 위쪽 여백 줄이기 */
+  background-color: #f78d83;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
 }
 
 .participate-button:hover {
-  background-color: #ff6f61; /* 호버 시 배경색 변화 */
+  background-color: #ff6f61;
+}
+
+/* 폭죽 애니메이션 스타일 */
+body {
+  overflow: hidden;
+}
+.fireworks-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+.firework {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: explode 0.6s forwards;
+}
+@keyframes explode {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
 
 /* 두번째 화면 */
@@ -133,34 +170,34 @@ h4 .pp {
 }
 
 .section2-box {
-  display: flex; /* Flexbox 활성화 */
-  justify-content: center; /* 가로 중앙 정렬 */
-  gap: 20px; /* 박스 간 간격 */
-  width: 100%; /* 가로 전체 사용 */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
 .section2 .box {
-  width: 250px; /* 고정 너비 */
-  height: 200px; /* 고정 높이 */
+  width: 250px;
+  height: 200px;
   background-color: white;
   border: 5px solid #b3c7d6;
   border-radius: 20px;
-  display: flex; /* Flexbox 활성화 */
-  flex-direction: column; /* 세로 정렬 */
-  align-items: center; /* 중앙 정렬 */
-  justify-content: center; /* 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.3s ease;
-  position: relative; /* 상대 위치 */
+  position: relative;
 }
 
 .section2 .box:hover {
-  transform: translateY(-10px) scale(1.05); /* 호버 시 약간 확대 */
+  transform: translateY(-10px) scale(1.05);
   z-index: 2;
 }
 
 .box h5 {
-  font-size: 18px; /* 박스 제목 크기 */
-  margin-bottom: 10px; /* 제목 아래 여백 */
+  font-size: 25px;
+  margin-bottom: 10px;
   text-align: center;
   color: #14286d;
   -webkit-text-stroke: 0.01px #9c9e9f;
@@ -187,7 +224,7 @@ h4 .pp {
 
 .section3 h4 {
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400;
   margin-bottom: 100px;
   text-align: center;
@@ -195,25 +232,25 @@ h4 .pp {
 
 .coupon-wrapper {
   display: flex;
-  justify-content: center; /* 가운데 정렬 */
-  gap: 50px; /* 쿠폰 간의 간격 */
-  margin-top: 20px; /* 위쪽 여백 */
-  padding: 10px; /* 여유 공간 추가 */
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+  padding: 10px;
   overflow: visible;
 }
 
 .coupon-container {
   display: flex;
-  width: 350px; /* 고정 너비 */
-  height: 180px; /* 고정 높이 */
+  width: 350px;
+  height: 180px;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.2s; /* 애니메이션 추가 */
+  transition: transform 0.2s;
 }
 
 .coupon-container:hover {
-  transform: scale(1.05); /* 마우스 오버 시 크기 증가 */
-  z-index: 1; /* 다른 요소 위에 놓기 */
+  transform: scale(1.05);
+  z-index: 1;
 }
 
 .left {
@@ -223,9 +260,9 @@ h4 .pp {
 }
 
 .img3coupon {
-  font-size: 20px; /* 원하는 크기로 조정 */
-  color: #275d85; /* 색상 추가 */
-  margin: 10px 0; /* 여백 추가 */
+  font-size: 20px;
+  color: #275d85;
+  margin: 10px 0;
 }
 
 .img3coupon2 {
@@ -269,56 +306,81 @@ h4 .pp {
   text-align: center;
 }
 
-/* 반응형 디자인을 위한 미디어 쿼리 */
-
 /* 첫번째 반응형 */
 
-/* 기존 CSS 내용 위에 추가하세요. */
-
-/* 반응형 디자인을 위한 미디어 쿼리 */
 @media (max-width: 768px) {
   .section1 {
-    padding: 15px; /* 여백 줄이기 */
+    padding: 15px;
   }
 
   .section1 h2 {
-    font-size: 36px; /* 제목 크기 줄이기 */
-    margin-bottom: 50px; /* 여백 줄이기 */
+    font-size: 36px;
+    margin-bottom: 50px;
   }
 
   .section1 strong {
-    font-size: 60px; /* 강조 텍스트 크기 줄이기 */
+    font-size: 60px;
   }
 
   .section1 h3 p {
-    font-size: 20px; /* 하위 텍스트 크기 줄이기 */
-    margin-bottom: 5px; /* 하위 텍스트 여백 줄이기 */
+    font-size: 20px;
+    margin-bottom: 5px;
   }
 
   .section1 h3 {
-    font-size: 14px; /* 하위 제목 크기 줄이기 */
+    font-size: 14px;
   }
 
   .section1-box {
-    flex-direction: column; /* 세로로 쌓기 */
-    align-items: center; /* 중앙 정렬 */
-    gap: 20px; /* 박스 간 간격 줄이기 */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   .section1-box .box {
-    width: 90%; /* 박스 너비를 화면에 맞춤 */
-    max-width: 300px; /* 최대 너비 제한 */
-    height: auto; /* 높이 자동 조정 */
+    width: 90%;
+    max-width: 300px;
+    height: auto;
   }
 
   .icon {
-    width: 40px; /* 아이콘 크기 줄이기 */
-    height: 40px; /* 아이콘 크기 줄이기 */
+    width: 40px;
+    height: 40px;
   }
 
   .participate-button {
-    font-size: 18px; /* 버튼 글자 크기 줄이기 */
-    padding: 12px 25px; /* 버튼 여백 조정 */
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .section1 h2 {
+    font-size: 20px;
+    padding: 10px 0;
+    width: 90%;
+    text-align: center;
+  }
+
+  .section1 strong {
+    font-size: 30px;
+  }
+
+  .section1-box .box {
+    width: 70%;
+    max-width: 280px;
+  }
+
+  .section1 h3 {
+    font-size: 12px;
+  }
+
+  .section1 h3 p {
+    font-size: 16px;
+  }
+
+  .participate-button {
+    font-size: 14px;
   }
 }
 
@@ -326,36 +388,47 @@ h4 .pp {
 
 @media (max-width: 768px) {
   .section2 {
-    padding: 10px; /* 여백 줄이기 */
+    padding: 10px;
   }
 
   h4 .pp {
-    font-size: 50px; /* 폰트 크기 줄이기 */
+    font-size: 50px;
   }
 
   .section2 h4 {
-    font-size: 18px; /* 제목 크기 줄이기 */
-    margin-bottom: 50px; /* 여백 줄이기 */
+    font-size: 18px;
+    margin-bottom: 50px;
   }
 
   .section2-box {
-    flex-direction: column; /* 박스 세로 쌓기 */
-    align-items: center; /* 중앙 정렬 */
-    gap: 20px; /* 간격 유지 */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   .section2 .box {
-    width: 90%; /* 너비를 90%로 조정 */
-    max-width: 300px; /* 최대 너비 제한 */
-    height: auto; /* 높이를 자동으로 조정 */
+    width: 90%;
+    max-width: 300px;
+    height: auto;
   }
 
   .box h5 {
-    font-size: 16px; /* 제목 크기 줄이기 */
+    font-size: 20px;
   }
 
   .box p {
-    font-size: 14px; /* 본문 폰트 크기 줄이기 */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  h4 .pp {
+    font-size: 40px;
+  }
+
+  .section2 h4 {
+    font-size: 12px;
+    margin-bottom: 50px;
   }
 }
 
@@ -363,43 +436,78 @@ h4 .pp {
 
 @media (max-width: 768px) {
   .section3 {
-    padding: 10px; /* 여백 줄이기 */
+    padding: 10px;
   }
 
   .section3 h4 p {
-    font-size: 50px; /* 폰트 크기 줄이기 */
+    font-size: 50px;
   }
 
   .section3 h4 {
-    font-size: 15px; /* 제목 크기 줄이기 */
-    margin-bottom: 50px; /* 여백 줄이기 */
+    font-size: 20px;
+    margin-bottom: 50px;
   }
 
   .coupon-wrapper {
-    flex-direction: column; /* 쿠폰 세로 쌓기 */
-    align-items: center; /* 중앙 정렬 */
-    gap: 50px; /* 간격 줄이기 */
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
   }
 
   .coupon-container {
-    width: 90%; /* 너비를 90%로 조정 */
-    max-width: 350px; /* 최대 너비 제한 */
-    height: auto; /* 높이를 자동으로 조정 */
+    width: 90%;
+    max-width: 350px;
+    height: auto;
   }
 
   .img3coupon {
-    font-size: 18px; /* 폰트 크기 줄이기 */
+    font-size: 18px;
   }
 
   .img3coupon2 {
-    font-size: 24px; /* 폰트 크기 줄이기 */
+    font-size: 24px;
   }
 
   .img3coupon3 {
-    font-size: 12px; /* 폰트 크기 유지 */
+    font-size: 12px;
   }
 
   .coupon-text {
-    font-size: 16px; /* 폰트 크기 줄이기 */
+    font-size: 16px;
+  }
+}
+
+/* 집 아이콘 */
+
+.home-icon {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.home-icon a {
+  text-decoration: none;
+  color: #000;
+}
+
+.home-icon:hover {
+  background-color: #fff;
+}
+
+@media (max-width: 375px) {
+  .home-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
   }
 }
