@@ -4,7 +4,6 @@
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
 }
 header {
@@ -58,8 +57,10 @@ button {
 }
 
 footer {
+  padding: 100px 0;
   position: relative;
   top: 15vh;
+  width: 100%;
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -67,16 +68,14 @@ footer {
 footer .container {
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 footer ul {
   display: flex;
   gap: 30px;
   justify-content: center;
-}
-
-.footer-description {
-  text-align: left;
 }
 /*카테고리*/
 .categor {
@@ -157,22 +156,19 @@ main {
 }
 .ProductSlider {
   width: 100%;
-  height: 800px;
-  background-color: rgb(255, 232, 232);
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 /*이미지 영역*/
 .card {
-  width: 18%;
-  height: 350px;
-  border: 1px solid #e6cbcb;
-  background-color: #e6cbcb;
+  width: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: space-between;
 }
 .card img {
   width: 100%;
@@ -181,10 +177,6 @@ main {
   opacity: 0.8;
   font-size: 1rem;
   font-weight: 500;
-}
-.description {
-  opacity: 0.8;
-  font-size: 14px;
 }
 .price {
   opacity: 0.8;
@@ -217,7 +209,25 @@ main {
   justify-content: space-between;
 }
 
-footer {
-  width: 100vw;
-  height: 500px;
+@media (375px <= width < 768px) {
+  /*header*/
+  main {
+    margin: 0 50px;
+  }
+  .card {
+    width: 100px;
+    height: 200px;
+  }
+  .categor {
+    margin: 0;
+  }
+  .categor ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 20px;
+  }
+  .categor > ul:first-child {
+    font-size: 12px;
+  }
 }
