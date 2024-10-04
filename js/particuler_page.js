@@ -71,8 +71,16 @@ window.onload = () => {
   });
 
   addToCartBtn.addEventListener("click", function () {
-    // 장바구니 페이지로 이동
-    window.location.href = "shopping_list.html";
+    Swal.fire("장바구니에 담았습니다!");
+  });
+
+  addToCartBtn.addEventListener("mousedown", function () {
+    commentButton.style.transform = "scale(0.9)";
+  });
+
+  // 버튼을 떼면 scale 원상복구
+  addToCartBtn.addEventListener("mouseup", function () {
+    commentButton.style.transform = "scale(1)";
   });
 
   // 페이지 로드 시 총 가격 계산

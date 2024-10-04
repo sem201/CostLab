@@ -150,7 +150,7 @@ for (let i = 0; i < products.length; i++) {
 
   divBox.append(divBox1, divBox2, divBox4);
   divBox.addEventListener("click", function () {
-    window.location.href = `particuler_page.html?id=${products[i].id}`;
+    window.location.href = `html/particuler_page.html?id=${products[i].id}`;
   });
   ProductSlider.append(divBox);
 
