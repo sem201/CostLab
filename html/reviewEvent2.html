@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>다시</title>
     <link rel="stylesheet" href="../css/reviewEvent2.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <!-- 구글 웹 폰트 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
       rel="stylesheet"
     />
-    <!-- jquery cdn -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-    <!-- fullpage.js css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.29/fullpage.css"
@@ -27,7 +27,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- fullpage.js cdn -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.29/fullpage.min.js"
       integrity="sha512-jedW9bHnXiSMKNbXfrEQ1gDCRYO8ewRlWPWPf4Fv1LpUyYB0fphiWlUVSGI2Dvwem1gUk0x1Y+cWs4lCwoEo8w=="
@@ -38,9 +37,7 @@
   <body>
     <div class="container">
       <div id="fullpage">
-
         <!-- 첫번째 이미지 -->
-        
         <div class="section section1">
           <h2>
             리뷰쓰고<br />
@@ -49,12 +46,11 @@
           <div class="section1-box">
             <div class="box box1">
               <h3>
-                <br />
                 <p>사진과 함께</p>
-                <br />
                 포토리뷰를 남겨주신 분께<br />
                 1,000포인트 드립니다.
               </h3>
+              <img src="../img/cameraicon.png" alt="사진 아이콘" class="icon" />
             </div>
             <div class="box box2">
               <h3>
@@ -65,75 +61,87 @@
                 #코스트코리뷰 <br />
                 #코스트코꿀템
               </h3>
+              <img
+                src="../img/hashtagicon.png"
+                alt="해시태그 아이콘"
+                class="icon"
+              />
             </div>
           </div>
+          <button class="participate-button">이벤트 참여하기</button>
         </div>
 
         <!-- 두번째 이미지 -->
-        
         <div class="section section2">
           <h4>
             <p class="pp">포토리뷰 이벤트</p>
             구매 확정 후 포토리뷰를 남겨주시면 포인트를 드립니다.
+          </h4>
           <div class="section2-box">
             <div class="box box3">
               <h5>1. 사진과 함께</h5>
-              <p>포토리뷰를 남기면 <br>1,000 포인트!</p>
+              <p>포토리뷰를 남기면 <br />1,000 포인트!</p>
             </div>
             <div class="box box4">
               <h5>2. 해시태그와 함께</h5>
               <p>
-              #costco <br />
-              #costcokorea <br />
-              #코스트코 <br />
-              #코스트코리뷰 <br />
-              #코스트코꿀템
+                #costco <br />
+                #costcokorea <br />
+                #코스트코 <br />
+                #코스트코리뷰 <br />
+                #코스트코꿀템
               </p>
             </div>
             <div class="box box5">
               <h5>3. 특별 보너스</h5>
               <p>
-              포토리뷰를 SNS에 공유하면 <br>추가 포인트를 드립니다! <br />
-              <br>선착순 1,000명
+                포토리뷰를 SNS에 공유하면 <br />추가 포인트를 드립니다! <br />
+                <br />선착순 1,000명
               </p>
             </div>
           </div>
         </div>
+
         <!-- 세번째 이미지 -->
-        
         <div class="section section3">
           <h4>
-            <p>포토리뷰 이벤트</p>
+            <p>할인 이벤트</p>
             쿠폰을 클릭하세요!
-            <br><br><br><br><br>
           </h4>
           <div class="coupon-wrapper">
             <div class="coupon-container" onclick="showAlert()">
-            <div class="left">
-              <div class="coupon-text">COUPON</div>
+              <div class="left">
+                <div class="coupon-text">COUPON</div>
+              </div>
+              <div class="right">
+                <br />
+                <p class="img3coupon">5만원 이상 구매시</p>
+                <h2 class="img3coupon2">5% 할인</h2>
+                <p class="img3coupon3">최대 5,000원 할인</p>
+              </div>
             </div>
-            <div class="right">
-              <br>
-              <p class="img3coupon">5만원 이상 구매시</p>
-              <h2 class="img3coupon2">5% 할인</h2>
-              <p class="img3coupon3">최대 5,000원 할인</p>
-            </div>
-          </div>
-        
-          <div class="coupon-container" onclick="showAlert()">
-            <div class="left">
-              <div class="coupon-text">COUPON</div>
-            </div>
-            <div class="right">
-              <br>
-              <p class="img3coupon">3만원 이상 구매시</p>
-              <h2 class="img3coupon2">무료배송</h2>
-              <p class="img3coupon3">모든 고객 전용</p>
+
+            <div class="coupon-container" onclick="showAlert()">
+              <div class="left">
+                <div class="coupon-text">COUPON</div>
+              </div>
+              <div class="right">
+                <br />
+                <p class="img3coupon">3만원 이상 구매시</p>
+                <h2 class="img3coupon2">무료배송</h2>
+                <p class="img3coupon3">모든 고객 전용</p>
+              </div>
             </div>
           </div>
         </div>
-        
-        
+      </div>
+    </div>
+
+    <div class="home-icon">
+      <a href="index.html">🏠</a>
+      <!-- 링크를 원하는 홈 페이지 URL로 수정 -->
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/reviewEvent.js"></script>
   </body>
