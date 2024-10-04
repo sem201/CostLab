@@ -45,18 +45,14 @@ function showFireworks() {
   }, 3000);
 }
 
-const boxes = document.querySelectorAll(".section2-box .box");
-const participateButton = document.querySelector(".participate-button");
-
-boxes.forEach((box) => {
-  box.addEventListener("mouseenter", showFireworks);
+// 페이지가 로드되면 폭죽을 주기적으로 터트리기 시작
+document.addEventListener("DOMContentLoaded", () => {
+  setInterval(showFireworks, 1000); // 1초마다 폭죽 터지기
 });
 
-if (participateButton) {
-  participateButton.addEventListener("mouseenter", showFireworks);
-}
-
+// 여기서부터
 // 집 아이콘 만들기
+
 document.querySelector(".home-icon a").addEventListener("click", (e) => {
   e.preventDefault(); // 기본 링크 동작 방지
 
