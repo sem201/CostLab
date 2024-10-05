@@ -1,13 +1,13 @@
 const product = JSON.parse(localStorage.getItem("productList"));
 
 const shopping = JSON.parse(localStorage.getItem("shoppingList"));
-
+let userDeliveryPrice;
 window.onload = () => {
   const ul = document.querySelector(".choose_list");
   const empty = document.querySelector(".empty");
   const deliveryPrice = document.querySelector("#delivery_price");
   let sum = 0;
-  let userDeliveryPrice;
+  const shopping = JSON.parse(localStorage.getItem("shoppingList")) || [];
   if (shopping.length > 0) {
     userDeliveryPrice = 3000;
     deliveryPrice.innerText = `${userDeliveryPrice.toLocaleString()}원`;
@@ -62,7 +62,6 @@ window.onload = () => {
         goodsBox.append(goodsDetail, goodsCount, goodsPrice);
         li.append(input, img, goodsBox, button);
         ul.append(li);
-
         input.addEventListener("change", updateTotal);
       }
     });
@@ -77,6 +76,7 @@ window.onload = () => {
   const totalPrice = document.querySelector("#total_price");
 
   totalPrice.innerText = `${(sum - userDeliveryPrice).toLocaleString()}원`;
+  updateTotal();
   function updateTotal() {
     let sum = 0;
     let checkedCount = 0;
@@ -90,12 +90,19 @@ window.onload = () => {
         const productCount = shopping.find(
           (s) => parseInt(s[0]) === shoppingId
         )[1];
+
         const itemPrice = parseInt(item.price.replace(/[^0-9]/g, ""));
         sum += itemPrice * productCount;
+        console.log(itemPrice);
+        console.log(productCount);
+        console.log(sum);
       }
     });
     if (checkedCount === 0) {
       userDeliveryPrice = 0;
+      deliveryPrice.innerText = `${userDeliveryPrice}원`;
+    } else {
+      userDeliveryPrice = 3000;
       deliveryPrice.innerText = `${userDeliveryPrice}원`;
     }
     totalProductPrice.innerText = `${sum.toLocaleString()}원`;
