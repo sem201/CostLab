@@ -200,6 +200,11 @@ main button {
   border-radius: 10px;
 }
 
+.tab-button button:first-child {
+  background-color: #80c342;
+  color: #ffffff;
+}
+
 .tab-button button:hover {
   background-color: #80c342;
   color: #ffffff;
