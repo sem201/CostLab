@@ -176,6 +176,59 @@ main button {
 #add-to-cart:active {
   transform: scale(0.9);
 }
+
+#tab {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.tab-button button {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-size: 25px;
+  margin-right: 5px;
+  color: #000;
+  border-radius: 10px;
+}
+
+.tab-button button:first-child {
+  background-color: #80c342;
+  color: #ffffff;
+}
+
+.tab-button button:hover {
+  background-color: #80c342;
+  color: #ffffff;
+}
+
+.tab-button button:active {
+  background-color: #80c342;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tab-content:active {
+  display: block;
+}
+
+.tab-content.active {
+  display: block;
+}
+
 #comment {
   margin: 0 auto;
   text-align: end;
@@ -221,6 +274,23 @@ main button {
   padding: 50px 0;
   font-size: 21px;
   border-bottom: 1px solid #000000;
+}
+
+#dilivery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#dilivery h2 {
+  font-size: 33px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#dilivery p {
+  font-size: 21px;
+  line-height: 35px;
 }
 
 footer {
@@ -295,7 +365,12 @@ footer ul {
   }
 
   .quantity-container {
+    display: block;
+  }
+
+  .quantity-inner {
     justify-content: center;
+    margin-bottom: 10px;
   }
 
   #comment {
@@ -335,7 +410,12 @@ footer ul {
   }
 
   .quantity-container {
+    display: block;
+  }
+
+  .quantity-inner {
     justify-content: center;
+    margin-bottom: 10px;
   }
 
   #comment {

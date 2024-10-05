@@ -53,20 +53,61 @@
         <!-- 상품 상세 정보가 여기에 렌더링 됨 -->
       </section>
       <hr />
-      <section id="comment">
-        <h2>상품 후기</h2>
-        <br />
-        <textarea
-          id="comment-input"
-          class="comment-input"
-          rows="4"
-          placeholder="댓글을 입력하세요."
-        ></textarea>
-        <br />
-        <button id="comment-button" class="comment-button">댓글 등록</button>
-        <ul id="comment-list" class="comment-list">
-          <!-- 댓글 목록이 여기 표시됩니다. -->
-        </ul>
+
+      <section id="tab">
+        <div class="tab-button">
+          <button class="tablinks" id="comment-tab">상품 후기</button>
+          <button class="tablinks" id="dilivery-tab">배송 안내</button>
+        </div>
+        <!-- 상품 후기 콘텐츠 -->
+        <div id="comment" class="tab-content active">
+          <h2>상품 후기</h2>
+          <br />
+          <textarea
+            id="comment-input"
+            class="comment-input"
+            rows="4"
+            placeholder="댓글을 입력하세요."
+          ></textarea>
+          <br />
+          <button id="comment-button" class="comment-button">댓글 등록</button>
+          <ul id="comment-list" class="comment-list">
+            <!-- 댓글 목록이 여기 표시됩니다. -->
+          </ul>
+        </div>
+        <!-- 배송 안내 콘텐츠 -->
+        <div id="dilivery" class="tab-content">
+          <h2>배송 안내</h2>
+          <p>
+            - Same-Day 카테고리 상품으로 75,000원 이상 구매 시 주문 가능하며
+            배송비 9,900원이 주문단계에서 별도 부과됩니다.
+            <br />
+            - Same-Day는 신선도 유지를 위해 대면 배송 서비스만 제공합니다.
+            <br />
+            - 첫 주문 마감시간은 오전 9시까지, 마지막 주문 마감시간은 오후
+            4시까지 입니다.
+            <br />
+            - 상품 재고와 배송 가능 일정은 주문하시는 매장에 따라 다를 수
+            있습니다.
+            <br />
+            - 만족스러운 서비스를 제공하기 위해 최선을 다하고 있습니다만, 예상치
+            못한 주문 증가, 배송 사고 등으로 인해 예정된 시간까지 도착하지 못할
+            수도 있습니다. 이 경우 고객센터에서 가능한 빠른 시간 내에
+            연락드리겠습니다.
+            <br />
+            - 반품은 가까운 코스트코 매장을 방문하시거나, 고객센터(1899-9900)로
+            연락 주시면 안내해 드리겠습니다.
+            <br />
+            - 텔레비전, 프로젝터, 컴퓨터, 태블릿 PC, 휴대폰, 스마트 워치,
+            카메라, 드론, 냉장고(280 리터이상), 김치냉장고, 냉동고, 세탁기,
+            건조기, 에어컨, 인덕션 & 가스레인지, 대형 오븐레인지, 식기세척기는
+            배송 완료 후 90일 이내에만 반품이 가능합니다.
+            <br />
+            - 상품의 반품이 완료된 후 3~6영업일 내에 환불되며, 환불 시
+            전자상거래 등에서의 소비자 보호에 관한 법률 제18조에 따라
+            조치합니다.
+          </p>
+        </div>
       </section>
     </main>
 
