@@ -123,11 +123,35 @@ window.onload = () => {
     }
   });
 
-  // input 내에서 Enter를 활용하기
-  commentInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter" && !event.shiftKey) {
-      event.preventDefault(); // 기본 Enter 키 동작 방지 (줄바꿈)
-    }
+  const commentTab = document.getElementById("comment-tab");
+  const diliveryTab = document.getElementById("dilivery-tab");
+  const commentContent = document.getElementById("comment");
+  const diliveryContent = document.getElementById("dilivery");
+
+  commentTab.addEventListener("click", function () {
+    // 상품 후기 콘텐츠 표시
+    commentContent.style.display = "block";
+    diliveryContent.style.display = "none";
+    commentTab.style.background = "#80c342";
+    commentTab.style.color = "#ffffff";
+    diliveryTab.style.background = "#f1f1f1";
+    diliveryTab.style.color = "#000000";
+
+    commentContent.classList.add("active");
+    diliveryContent.classList.remove("active");
+  });
+
+  diliveryTab.addEventListener("click", function () {
+    // 배송 안내 콘텐츠 표시
+    diliveryContent.style.display = "block";
+    commentContent.style.display = "none";
+    diliveryTab.style.background = "#80c342";
+    diliveryTab.style.color = "#ffffff";
+    commentTab.style.background = "#f1f1f1";
+    commentTab.style.color = "#000000";
+
+    diliveryContent.classList.add("active");
+    commentContent.classList.remove("active");
   });
 };
 

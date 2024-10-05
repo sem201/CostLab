@@ -70,6 +70,7 @@ hr {
   margin: 5vh 0 1vh;
 }
 .main_container {
+  margin-top: 15vh;
   display: flex;
   align-items: center;
   flex-direction: column;
