@@ -29,7 +29,7 @@ header {
   left: 0;
   background-color: #fff;
   z-index: 10;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000;
 }
 button {
   background-color: inherit;
@@ -128,6 +128,11 @@ main button {
   display: flex;
   width: 100%;
   align-items: center;
+  justify-content: space-between;
+}
+
+.quantity-inner {
+  display: flex;
 }
 
 .quantity-container button {
@@ -156,23 +161,29 @@ main button {
   text-align: center;
 }
 
+.quantity-container p {
+  font-size: 21px;
+  font-weight: 900;
+}
+
 #add-to-cart {
   width: 200px;
   margin: 0 auto;
   font-size: 21px;
   background-color: #80c342;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 #add-to-cart:active {
   transform: scale(0.9);
 }
 #comment {
-  text-align: center;
   margin: 0 auto;
+  text-align: end;
 }
 
 #comment h2 {
   font-size: 33px;
+  text-align: left;
 }
 
 #comment-input {
@@ -197,6 +208,7 @@ main button {
 
 #comment textarea {
   font-size: 21px;
+  padding: 5px;
 }
 
 #comment textarea::placeholder {

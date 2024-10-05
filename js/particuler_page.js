@@ -14,12 +14,14 @@ function renderProductDetail(product) {
   <span>${product.description}</span>
   <p>가격 : <span id="price">${product.price}</span></p>
     <div class="quantity-container">
-    <button id="decrease"><i class="fa-solid fa-minus"></i></button>
-    <input type="text" id="quantity" value="1" readonly>
-    <button id="increase"><i class="fa-solid fa-plus"></i></button>
+      <div class="quantity-inner">
+        <button id="decrease"><i class="fa-solid fa-minus"></i></button>
+        <input type="text" id="quantity" value="1" readonly>
+        <button id="increase"><i class="fa-solid fa-plus"></i></button>
+      </div>
+      <p id="total-price">
+      총 금액: <spa n id="total">${product.price}</spa></p>
     </div>
-    <p id="total-price">
-    총 금액: <span id="total">${product.price}</span></p>
     <button onclick="addToCart(${product.id})" id="add-to-cart">장바구니</button>
   </div>`;
 }
@@ -75,12 +77,12 @@ window.onload = () => {
   });
 
   addToCartBtn.addEventListener("mousedown", function () {
-    commentButton.style.transform = "scale(0.9)";
+    addToCartBtn.style.transform = "scale(0.9)";
   });
 
   // 버튼을 떼면 scale 원상복구
   addToCartBtn.addEventListener("mouseup", function () {
-    commentButton.style.transform = "scale(1)";
+    addToCartBtn.style.transform = "scale(1)";
   });
 
   // 페이지 로드 시 총 가격 계산
