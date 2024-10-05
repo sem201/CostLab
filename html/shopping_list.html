@@ -9,7 +9,7 @@
   <body>
     <header>
       <div class="search_container"></div>
-      <a href="http://127.0.0.1:5500/html/index.html"
+      <a href="http://127.0.0.1:5500/index.html"
         ><div class="title">COSTCO</div></a
       >
       <div class="info-container">
@@ -35,7 +35,6 @@
         </div>
       </div>
     </header>
-    <hr />
     <div class="main_container">
       <div class="main_header"><h2>장바구니</h2></div>
 
@@ -132,7 +131,7 @@
     <script>
       const purchase = document.querySelector(".purchase");
       purchase.addEventListener("click", function () {
-        if (shopping) {
+        if (userDeliveryPrice) {
           Swal.fire({
             title: "구매가 완료되었습니다!",
             text: "다른 상품도 둘러보세요!",
