@@ -64,6 +64,6 @@ document.querySelector(".home-icon a").addEventListener("click", (e) => {
 
   // 잠시 후에 홈 페이지로 이동
   setTimeout(() => {
-    window.location.href = "index.html"; // 원하는 홈 페이지 URL로 수정
+    window.location.href = "../index.html"; // 원하는 홈 페이지 URL로 수정
   }, 800);
 });
